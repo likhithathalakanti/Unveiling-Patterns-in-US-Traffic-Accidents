@@ -1,0 +1,6 @@
+# Data exploration
+def explore_data(df):
+    print("Schema:")
+    df.printSchema()
+    print("Summary statistics:")
+    df.describe().show()
