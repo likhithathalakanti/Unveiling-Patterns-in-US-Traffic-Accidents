@@ -3,3 +3,13 @@
 import pandas as pd
 df = pd.read_csv('xxxx.csv',header=None)
 df
+
+
+#check for null
+df.isnull().any()
+
+df.tail(-1)
+
+df = df.head(1000000)
+
+df
