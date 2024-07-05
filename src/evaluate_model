@@ -1,0 +1,6 @@
+# Evaluate model
+def evaluate_model(model, df):
+    predictions = model.transform(df)
+    evaluator = RegressionEvaluator(labelCol="Severity", predictionCol="prediction", metricName="rmse")
+    rmse = evaluator.evaluate(predictions)
+    print(f"Root Mean Squared Error (RMSE): {rmse}")
